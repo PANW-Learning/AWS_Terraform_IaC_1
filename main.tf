@@ -9,19 +9,14 @@ terraform {
   required_version = ">= 1.2.0"
 }
 
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
-
 provider "aws" {
   region     = "us-west-2"
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
 }
 
 resource "aws_security_group" "Ec2_security1" {
   name        = "TerraformEc2_security1"
   description = "Allow TLS inbound traffic"
-  vpc_id      = "vpc-05ae32088bccb6d55"
+  vpc_id      = vpc-03253122f3b3dad51"
   ingress {
     from_port   = 80
     to_port     = 80
